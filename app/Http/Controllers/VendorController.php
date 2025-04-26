@@ -138,7 +138,7 @@ class VendorController extends Controller
 
         // Update juga nilai_alternatif jika username berubah
         if ($oldUsername !== $request->username) {
-            \App\Models\NilaiAlternatif::where('kode_alternatif', $oldUsername)
+            NilaiAlternatif::where('kode_alternatif', $oldUsername)
                 ->update(['kode_alternatif' => $request->username]);
         }
 
